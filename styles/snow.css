@@ -1,0 +1,57 @@
+@keyframes snowflakes-shake {
+	0%,
+	100% {
+		transform: translateX(0)
+	}
+	50% {
+		transform: translateX(20px)
+	}
+}
+
+.snowflake {
+    color: white;
+    position: absolute;
+    top: -1rem;
+    left: 0px;
+    font-size: 16pt;
+    animation: upDown 1.5s alternate infinite ease-in-out;
+
+}
+
+.snowflake-0 {
+    animation-delay: 0s;
+}
+
+.snowflake-1 {
+    animation-delay: 0s;
+}
+
+.snowflake-2 {
+    animation-delay: .4s;
+}
+.snowflake-3 {
+    animation-delay: .4s;
+}
+.snowflake-4 {
+    animation-delay: .2s;
+}
+
+@keyframes upDown {
+    to { transform: translatex(30px);}
+}
+@keyframes translate {
+    to { transform: translatex(900%);}
+}
+
+.snowflakes {
+    height: 100%;
+    width: 100%;
+    position:relative;
+    overflow:hidden;
+    background: #082f3d;
+    background: radial-gradient(circle, rgba(12,65,84,1) 0%, rgba(8,47,61,1) 100%);
+}
+
+.snowflake {
+    font-size: 80pt;
+}

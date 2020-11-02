@@ -1,0 +1,59 @@
+
+.page {
+    overflow: hidden;
+    height: 35rem;
+    width: 22.5rem;
+    position: relative;
+    /* temp settings */
+    /* position: absolute;
+    top: 5rem;
+    left: 5rem; */
+    width: 80%;
+    height: 80%;
+}
+
+.page-outer {
+    height: 90%;
+    width: 95%;
+    background-color: #e1e7f5;
+    border-top-right-radius: 0.75rem;
+    border-bottom-right-radius: 0.75rem;
+    position: absolute;
+    top: 5%;
+    -webkit-box-shadow: 5px 5px 20px 5px rgba(0,0,0,0.3); 
+    box-shadow: 5px 5px 10px 5px rgba(0,0,0,0.2);
+}
+
+.page-inner {
+    height: 100%;
+    width: 100%;
+}
+
+.page-content {
+    height: 100%;
+    width: 100%;
+}
+
+.page-centered-header-text {
+    width: 100%;
+    /* font-size: 36pt; */
+    font-size: 100pt;
+    text-align: center;
+    color: #333;
+    position: absolute;
+    top: 3.5rem;
+    text-shadow: 3px 3px 5px rgba(0,0,0,0.2);
+}
+
+#snowman {
+    width: 90%;
+    margin-left: 5%;
+    /* margin-top: 11rem; */
+    margin-top: 50%;
+    filter: drop-shadow(5px 5px 10px rgba(0,0,0,0.2));
+}
+#book {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
