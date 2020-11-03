@@ -4,15 +4,9 @@
 
 .page {
     overflow: hidden;
-    height: 35rem;
-    width: 22.5rem;
     position: relative;
-    /* temp settings */
-    /* position: absolute;
-    top: 5rem;
-    left: 5rem; */
-    width: 80%;
-    height: 80%;
+    height: 100%;
+    width: 100%;
 }
 
 .page-outer {
@@ -60,4 +54,44 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+}
+
+.flipable-site {
+    overflow: hidden;
+    height: 35rem;
+    width: 22.5rem;
+    background-color: transparent;
+    perspective: 135rem;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: Center;
+    align-items: Center;
+    padding-left: 1rem;
+}
+
+.flipable-site-inner {
+    position: relative;
+    width: 80%;
+    height: 80%;
+    text-align: center;
+    transition: transform 1.5s;
+    transform-style: preserve-3d;
+    transform-origin: left center;
+}
+
+.flipable-site-front, .flipable-site-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+.flipable-site-back {
+    transform: rotateY(180deg);
+}
+
+.flipable-site-back > .page {
+    left: 2.5rem;
 }
