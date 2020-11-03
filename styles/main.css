@@ -49,3 +49,23 @@ body {
     width: 100%;
     overflow: hidden;
 }
+
+/* .mouth:hover {
+    transition: 2s;
+    d: path("M292.7357,362.73569q18.30531,6.30531,36.46972-1.69963");
+} */
+
+.mouth {
+    transition: 2s;
+    animation: grin 5s alternate infinite ease-in-out;
+}
+
+@keyframes grin {
+	0%,
+	100% {
+		d: path("M292.7357,362.73569q31,19,56-10");
+	}
+	50% {
+		d: path("M292.7357,362.73569q18.30531,6.30531,36.46972-1.69963");
+	}
+}

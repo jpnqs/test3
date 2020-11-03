@@ -9,7 +9,7 @@
         r="127.191002" />
     <circle id="e5_circle" cx="338.735718" cy="301.735657" style="fill:white;stroke:white;stroke-width:1px;"
         r="156.869003" />
-    <path d="M292.7357,362.73569q31,19,56-10" style="fill:none;stroke:black;stroke-width:1px;" id="e6_arc2" />
+    <path class="mouth" d="M292.7357,362.73569q31,19,56-10" style="fill:none;stroke:black;stroke-width:1px;" id="e6_arc2" />
     <path
         d="M295.0757,331.35269q12.9,1.953,24.66-8.617q2.05-2.22,3.617-7.957q1.14-13.442-3.404-17q-4.85-6.986-15.213-8.043q-26.49,0.9-42.723,1.447q-49.907-0.7-58.277,6.553q-4.89,5.38,6,10q47.35,15.63,85.34,23.894Z"
         style="stroke:orange;fill:orange;stroke-width:1px;" id="e10_area2" />
