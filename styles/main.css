@@ -32,8 +32,15 @@ html {
 }
 
 body {
-    background-color: #021032;
-    background-image: linear-gradient(to bottom, #021440, #01133d, #011239, #011136, #021032);
+    /* background-color: #021032;
+    background-image: linear-gradient(to bottom, #021440, #01133d, #011239, #011136, #021032); */
+    background: rgba(2, 16, 49, 1);
+	background: -webkit-radial-gradient(bottom, ellipse cover,  #021440 0%,#021032 100%);
+	background: -webkit-radial-gradient(ellipse at bottom, #021440 0%, #021032 100%);
+	background: -webkit-radial-gradient(bottom, ellipse, #021440 0%, #021032 100%);
+	background: radial-gradient(ellipse at bottom,  #021440 0%,#021032 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#094c72', endColorstr='#01293f',GradientType=1 );
+    background-repeat: no-repeat;
 }
 
 #snow {
