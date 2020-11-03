@@ -1,3 +1,6 @@
+:root {
+    --round: 1.25rem;
+}
 
 .page {
     overflow: hidden;
@@ -16,8 +19,8 @@
     height: 90%;
     width: 95%;
     background-color: #6f0000;
-    border-top-right-radius: 0.75rem;
-    border-bottom-right-radius: 0.75rem;
+    border-top-right-radius: var(--round);
+    border-bottom-right-radius: var(--round);
     position: absolute;
     top: 5%;
     -webkit-box-shadow: 5px 5px 20px 5px rgba(0,0,0,0.3); 
