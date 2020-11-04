@@ -87,6 +87,5 @@ function Snow(parent) {
 
 };
 
-
 var s = new Snow($('#snow'));
 s.start();

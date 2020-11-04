@@ -54,10 +54,14 @@
 
 .snowflake {
     font-size: 80pt;
+    opacity: 0.9;
 }
 
+.snowflake-middle {
+    
+}
 
 .snowflake-far {
-    font-size: 50pt;
-    color: #ccc;
+    font-size: 40pt;
+    opacity: 0.3;
 }
