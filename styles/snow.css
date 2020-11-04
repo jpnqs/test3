@@ -74,7 +74,7 @@ snowflake
 .sf {
     position: absolute;
     color: white;
-    animation: upDown 1.5s alternate infinite ease-in-out;
+    animation: upDown 1.5s alternate infinite ease-in-out, rotate-sf 12s alternate infinite ease-in-out;
 }
 
 .sf-large {
@@ -84,10 +84,14 @@ snowflake
 
 .sf-medium {
     font-size: 65pt;
-    opacity: 0.7;
+    opacity: 0.75;
 }
 
 .sf-small {
     font-size: 55pt;
-    opacity: 0.5;
+    opacity: 0.55;
+}
+
+@keyframes rotate-sf {
+    to { transform: rotate(-200deg);}
 }

@@ -1,11 +1,8 @@
+
 responsiveDesign.then(() => {
 
     var input = new TouchInput();
     input.render();
-
-    // create background snow effect
-    // var snow = new Snow($('#snow'));
-    // snow.start();
 
     var pageManager = new PageManager();
 
@@ -17,6 +14,6 @@ responsiveDesign.then(() => {
         }
     });
 
-    multi();
+    letItSnow();
 
 });
