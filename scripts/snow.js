@@ -1,7 +1,7 @@
 function Snow(parent) {
     var width = parent.innerWidth();
     var height = parent.innerHeight();
-    var flakeDelay = 400;
+    var flakeDelay = 200;
     var delayRandomizer = 100;
 
     var snowflakeBase = ['❅', '❆'];
@@ -19,11 +19,22 @@ function Snow(parent) {
     var _spawnFlake = function() {
         var flakeValue = _getSnowFlake();
 
-        var flake = $(`
-        <div class="snowflake snowflake-${Math.floor(Math.random() * 5)}">
-            ${flakeValue}
-        </div>
-        `);
+        var flake = null;
+        var small = Math.random() >= 0.8;
+
+        if (!small) {
+            flake = $(`
+            <div class="snowflake snowflake-${Math.floor(Math.random() * 5)}">
+                ${flakeValue}
+            </div>
+            `);
+        } else {
+            flake = $(`
+            <div class="snowflake snowflake-${Math.floor(Math.random() * 5)} snowflake-far">
+                ${flakeValue}
+            </div>
+            `);
+        }
         
         flake.appendTo(parent);
 
@@ -34,11 +45,19 @@ function Snow(parent) {
             "top": "-150px"
         });
 
-        flake.animate({
-            top: `${height + 100}px`
-        }, 7000, function() {
-            flake.remove();
-        });
+        if (!small) {
+            flake.animate({
+                top: `${height + 100}px`
+            }, 7000, function() {
+                flake.remove();
+            });
+        } else {
+            flake.animate({
+                top: `${height + 100}px`
+            }, 10000, function() {
+                flake.remove();
+            });
+        }
 
     }.bind(this);
 
