@@ -70,14 +70,7 @@ class TouchInput {
 
 }
 
-var ti = new TouchInput();
-
-ti.onSwipe((dir) => {
-    if (dir == 'left') {
-        $('.flipable-site-inner').css('transform', 'rotateY(-150deg)');
-    } else if (dir == 'right') {
-        $('.flipable-site-inner').css('transform', 'rotateY(0deg)');
-    }
-})
-
-ti.render();
+TouchInput.LEFT  = 'left';
+TouchInput.RIGHT = 'right';
+TouchInput.UP    = 'up';
+TouchInput.DOWN  = 'down';

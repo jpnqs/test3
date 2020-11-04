@@ -65,3 +65,29 @@
     font-size: 40pt;
     opacity: 0.3;
 }
+
+
+/*
+snowflake
+*/
+
+.sf {
+    position: absolute;
+    color: white;
+    animation: upDown 1.5s alternate infinite ease-in-out;
+}
+
+.sf-large {
+    font-size: 80pt;
+    opacity: 0.9;
+}
+
+.sf-medium {
+    font-size: 65pt;
+    opacity: 0.7;
+}
+
+.sf-small {
+    font-size: 55pt;
+    opacity: 0.5;
+}

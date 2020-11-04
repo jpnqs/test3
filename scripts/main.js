@@ -1,23 +1,20 @@
-var responsiveDesign = new $.Deferred();
+responsiveDesign.then(() => {
 
-(function() {
-    var responsive = new $.Deferred();
+    var input = new TouchInput();
+    input.render();
 
-    window.addEventListener("load", makeReponsive);
-    window.addEventListener("resize", makeReponsive);
+    // create background snow effect
+    // var snow = new Snow($('#snow'));
+    // snow.start();
 
-    function makeReponsive() {
-        var objs = $(".responsible-obj");
-        var width = objs.width();
-        objs.css("height", width * 1.5);
-        if (responsive.state() == "pending") {
-            setTimeout(() => {
-                $('#card').css('opacity', 1)
-            }, 3000);
-            responsive.resolve();
+    var pageManager = new PageManager();
+
+    input.onSwipe((dir) => {
+        if (dir == TouchInput.LEFT) {
+            pageManager.openPageById(0);
+        } else if (dir == TouchInput.RIGHT) {
+            pageManager.closePageById(0);
         }
-    }
+    });
 
-    responsive.then(responsiveDesign.resolve);
-    
-})();
+});
