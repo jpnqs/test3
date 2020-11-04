@@ -11,6 +11,9 @@ var responsiveDesign = new $.Deferred();
         var width = objs.width();
         objs.css("height", width * 1.5);
         if (responsive.state() == "pending") {
+            setTimeout(() => {
+                $('#card').css('opacity', 1)
+            }, 3000);
             responsive.resolve();
         }
     }
