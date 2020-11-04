@@ -17,4 +17,6 @@ responsiveDesign.then(() => {
         }
     });
 
+    multi();
+
 });
