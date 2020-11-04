@@ -78,18 +78,18 @@ snowflake
 }
 
 .sf-large {
-    font-size: 80pt;
+    font-size: 100pt;
     opacity: 0.9;
 }
 
 .sf-medium {
-    font-size: 65pt;
+    font-size: 85pt;
     opacity: 0.75;
 }
 
 .sf-small {
-    font-size: 55pt;
-    opacity: 0.55;
+    font-size: 75pt;
+    opacity: 0.5;
 }
 
 @keyframes rotate-sf {
