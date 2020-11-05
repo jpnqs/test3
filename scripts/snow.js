@@ -7,9 +7,9 @@ const sfSize = {
 };
 
 const sfDuration = {
-    [sfSize.large]: 7000,
-    [sfSize.medium]: 9000,
-    [sfSize.small]: 10000
+    [sfSize.large]: 9000,
+    [sfSize.medium]: 11000,
+    [sfSize.small]: 13000
 }
 
 function sf(size) {

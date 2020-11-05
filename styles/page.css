@@ -29,6 +29,13 @@
 .page-content {
   height: 100%;
   width: 100%;
+  border-top-right-radius: var(--round);
+  border-bottom-right-radius: var(--round);
+}
+
+.no-round {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
 }
 
 .page-centered-header-text {
@@ -39,7 +46,7 @@
   font-weight: bold;
   position: absolute;
   top: 3.5rem;
-  text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.4);
+  text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.65);
 }
 
 #snowman {
@@ -66,8 +73,11 @@
   display: flex;
   justify-content: Center;
   align-items: Center;
-  padding-left: 1rem;
+  position: absolute;
+  top: 0px;
+  left: 0px;
 }
+
 
 .flipable-site-inner {
   position: relative;
