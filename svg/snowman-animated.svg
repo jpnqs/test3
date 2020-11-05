@@ -1,7 +1,25 @@
-                        <svg id="snowman" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="680px" height="790px"
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" 
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg id="snowman" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="680px" height="790px"
     viewBox="-0.30770567059516907 0 680.6153564453125 790" preserveAspectRatio="xMidYMid meet">
     <rect id="svgEditorBackground" x="0" y="0" width="680" height="790" style="fill:none; stroke: none;" />
     <defs id="svgEditorDefs">
+        <style type="text/css"><![CDATA[
+            .mouth {
+                transition: 2s;
+                animation: grin 4s alternate infinite ease-in-out;
+            }
+
+            @keyframes grin {
+                0%,
+                100% {
+                    d: path("M292.7357,362.73569q31,19,56-10");
+                }
+                50% {
+                    d: path("M292.7357,362.73569q18.30531,6.30531,36.46972-1.69963");
+                }
+            }
+        ]]></style>
         <polygon id="svgEditorIconDefs" style="fill:rosybrown;" />
         <path id="svgEditorClosePathDefs" style="stroke:saddlebrown;stroke-width:1px;fill:teal;" />
     </defs>
