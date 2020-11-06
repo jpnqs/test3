@@ -1,5 +1,7 @@
 let it = '❄️'; // 😉
 
+const spawnTime = 600;
+
 const sfSize = {
     large: 2,
     medium: 1,
@@ -7,9 +9,9 @@ const sfSize = {
 };
 
 const sfDuration = {
-    [sfSize.large]: 9000,
-    [sfSize.medium]: 11000,
-    [sfSize.small]: 13000
+    [sfSize.large]: 11000,
+    [sfSize.medium]: 13000,
+    [sfSize.small]: 15000
 }
 
 function sf(size) {
@@ -72,5 +74,5 @@ function letItSnow() {
     setInterval(() => {
         var size = Math.floor(Math.random() * 3);
         animateSf(sf(size), parent);
-    }, 200);
+    }, spawnTime);
 }
