@@ -74,6 +74,7 @@ snowflake
 .sf {
     position: absolute;
     color: white;
+    font-size: "Comic Neue";
     animation: upDown 1.5s alternate infinite ease-in-out, rotate-sf 12s alternate infinite ease-in-out;
 }
 
@@ -84,12 +85,12 @@ snowflake
 
 .sf-medium {
     font-size: 145pt;
-    opacity: 0.8;
+    opacity: 0.9;
 }
 
 .sf-small {
     font-size: 135pt;
-    opacity: 0.65;
+    opacity: 1;
 }
 
 @keyframes rotate-sf {

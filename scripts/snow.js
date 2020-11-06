@@ -54,7 +54,7 @@ function animateSf(sf, parent) {
 
     sf.css({
         left: `${x}px`,
-        top: '-200px'
+        top: '-300px'
     });
 
     var duration = sfDuration[size];
@@ -75,4 +75,8 @@ function letItSnow() {
         var size = Math.floor(Math.random() * 3);
         animateSf(sf(size), parent);
     }, spawnTime);
+}
+
+function stopTheSnow() {
+    $('[sf]', $('#snow')).remove()
 }

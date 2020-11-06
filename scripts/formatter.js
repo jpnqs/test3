@@ -16,6 +16,8 @@ var responsiveDesign = new $.Deferred();
             }, 0);
             responsive.resolve();
         }
+        stopTheSnow();
+        letItSnow();
     }
 
     responsive.then(responsiveDesign.resolve);

@@ -14,6 +14,4 @@ responsiveDesign.then(() => {
         }
     });
 
-    letItSnow();
-
 });
