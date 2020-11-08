@@ -1,6 +1,6 @@
 let it = '❄️'; // 😉
 
-const spawnTime = 600;
+const spawnTime = 800;
 
 const sfSize = {
     large: 2,
@@ -12,29 +12,26 @@ const sfDuration = {
     [sfSize.large]: 11000,
     [sfSize.medium]: 13000,
     [sfSize.small]: 15000
-}
+};
 
-const snowflakeBase = ['❅', '❅', '❅', '❆'];
+const sfClasses = {
+    [sfSize.large]: 'sf-large',
+    [sfSize.medium]: 'sf-medium',
+    [sfSize.small]: 'sf-small'
+};
+
+const snowflakeBase = [
+    '❅',
+    '❅',
+    '❅',
+    '❆'
+];
 
 function sf(size) {
 
     var flake = $(`<div sf sf-size="${size}">${snowflakeBase[Math.floor(Math.random()*snowflakeBase.length)]}</div>`);
 
-    var sizeClass = '';
-
-    switch (size) {
-        case sfSize.small:
-            sizeClass = 'sf-small';
-            break;
-        case sfSize.medium:
-            sizeClass = 'sf-medium';
-            break;
-        case sfSize.large: 
-            sizeClass = 'sf-large';
-            break;
-        default:
-            throw 'Unkown snowflake size';
-    }
+    var sizeClass = sfClasses[size];
 
     flake.addClass('sf');
     flake.addClass(sizeClass);
@@ -84,5 +81,5 @@ function letItSnow() {
 }
 
 function stopTheSnow() {
-    $('[sf]', $('#snow')).remove()
+    $('[sf]', $('#snow')).remove();
 }
