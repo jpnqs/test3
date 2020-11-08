@@ -8,9 +8,9 @@ responsiveDesign.then(() => {
 
     input.onSwipe((dir) => {
         if (dir == TouchInput.LEFT) {
-            pageManager.openPageById(0);
+            pageManager.next();
         } else if (dir == TouchInput.RIGHT) {
-            pageManager.closePageById(0);
+            pageManager.last();
         }
     });
 
