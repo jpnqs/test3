@@ -96,3 +96,16 @@ snowflake
 @keyframes rotate-sf {
     to { transform: rotate(-200deg);}
 }
+
+.sf {
+    -webkit-transition: opacity 3s ease-in-out;
+    -moz-transition: opacity 3s ease-in-out;
+    -ms-transition: opacity 3s ease-in-out;
+    -o-transition: opacity 3s ease-in-out;
+    transition: opacity 3s ease-in-out;
+}
+
+.sf-fade-out {
+    opacity: 0;
+}
+

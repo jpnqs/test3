@@ -3,8 +3,14 @@ class PageManager {
 
     constructor() {
         this.oPages = $('[page-id]');
+        var aTemp = []
+        for (var i=this.oPages.length - 1; i>=0; i--) {
+            aTemp.push(this.oPages[i]);
+        }
+        this.oPages = $(aTemp);
         this.nActivePage = 0;
         this.oActivePage = $(this.oPages[this.nActivePage]);
+        this.nZIndex = 5;
     }
 
     openPageById(nId) {
@@ -22,7 +28,8 @@ class PageManager {
         this.oActivePage = $(this.oPages[this.nActivePage]);
     }
 
-    last() {
+    previous() {
+        var nTemp = this.nActivePage;
         this.nActivePage--;
         this.oActivePage.attr('page-open', false);
         this.oActivePage = $(this.oPages[this.nActivePage]);

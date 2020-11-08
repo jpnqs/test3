@@ -14,9 +14,11 @@ const sfDuration = {
     [sfSize.small]: 15000
 }
 
+const snowflakeBase = ['❅', '❅', '❅', '❆'];
+
 function sf(size) {
 
-    var flake = $(`<div sf sf-size="${size}">❅</div>`);
+    var flake = $(`<div sf sf-size="${size}">${snowflakeBase[Math.floor(Math.random()*snowflakeBase.length)]}</div>`);
 
     var sizeClass = '';
 
@@ -64,6 +66,10 @@ function animateSf(sf, parent) {
     }, duration, function() {
         sf.remove();
     });
+
+    setTimeout(() => {
+        sf.addClass('sf-fade-out');
+    }, duration * 0.95);
 
     sf.addClass(`snowflake-${Math.floor(Math.random() * 5)}`);
 
