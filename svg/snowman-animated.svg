@@ -5,20 +5,7 @@
     <rect id="svgEditorBackground" x="0" y="0" width="680" height="790" style="fill:none; stroke: none;" />
     <defs id="svgEditorDefs">
         <style type="text/css"><![CDATA[
-            .mouth {
-                transition: 2s;
-                animation: grin 4s alternate infinite ease-in-out;
-            }
 
-            @keyframes grin {
-                0%,
-                100% {
-                    d: path("M292.7357,362.73569q31,19,56-10");
-                }
-                50% {
-                    d: path("M292.7357,362.73569q18.30531,6.30531,36.46972-1.69963");
-                }
-            }
         ]]></style>
         <polygon id="svgEditorIconDefs" style="fill:rosybrown;" />
         <path id="svgEditorClosePathDefs" style="stroke:saddlebrown;stroke-width:1px;fill:teal;" />
@@ -27,7 +14,14 @@
         r="127.191002" />
     <circle id="e5_circle" cx="338.735718" cy="301.735657" style="fill:white;stroke:white;stroke-width:1px;"
         r="156.869003" />
-    <path class="mouth" d="M292.7357,362.73569q31,19,56-10" style="fill:none;stroke:black;stroke-width:1px;" id="e6_arc2" />
+    <path class="mouth" d="M292.7357,362.73569q31,19,56-10" style="fill:none;stroke:black;stroke-width:1px;" id="e6_arc2">
+        <animate 
+            attributeType="XML"
+            attributeName="d"
+            dur="2s"
+            repeatCount="indefinite"
+            values="M292.7357,362.73569q18.30531,6.30531,36.46972-1.69963;M292.7357,362.73569q31,19,56-10;M292.7357,362.73569q18.30531,6.30531,36.46972-1.69963"/>
+    </path>
     <path
         d="M295.0757,331.35269q12.9,1.953,24.66-8.617q2.05-2.22,3.617-7.957q1.14-13.442-3.404-17q-4.85-6.986-15.213-8.043q-26.49,0.9-42.723,1.447q-49.907-0.7-58.277,6.553q-4.89,5.38,6,10q47.35,15.63,85.34,23.894Z"
         style="stroke:orange;fill:orange;stroke-width:1px;" id="e10_area2" />
