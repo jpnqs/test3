@@ -83,3 +83,25 @@ body {
     align-items: center;  
     text-align: center;
 }
+
+#hint-container {
+    position: absolute;
+    width: 100%;
+    bottom: 2rem;
+    font-size: 60pt;
+    color: white;
+    text-align: center;
+}
+
+.hint-fade {
+    animation: hint-fade 1.5s alternate infinite ease-in-out;
+}
+
+@keyframes hint-fade {
+    from {
+        opacity: 0;
+    };
+    to {
+        opacity: 1;
+    }
+}
