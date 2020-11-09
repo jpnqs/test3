@@ -1,3 +1,7 @@
+:root {
+    --strip-color: #fffff2;
+}
+
 .polaroid {
     background-color: white;
     padding: 1rem;
@@ -27,23 +31,21 @@
     text-shadow: none;
 }
 
-.polaroid-strip-1 {
-    background-color: #fffff2;
+.polaroid-strip-1, .polaroid-strip-2 {
+    background-color: var(--strip-color);
     opacity: 0.6;
+    position: absolute;
     height: 4rem;
     width: 16rem;
-    position: absolute;
+}
+
+.polaroid-strip-1 {
     transform: rotate(-30deg);
     top: 6.5rem;
     left: 2.5rem;
 }
 
 .polaroid-strip-2 {
-    background-color: #fffff2;
-    opacity: 0.6;
-    height: 4rem;
-    width: 16rem;
-    position: absolute;
     transform: rotate(-35deg);
     top: 57rem;
     left: 28.5rem;
