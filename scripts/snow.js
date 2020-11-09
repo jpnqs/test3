@@ -1,6 +1,7 @@
 let it = '❄️'; // 😉
 
 const spawnTime = 800;
+var spawnerId = '';
 
 const sfSize = {
     large: 2,
@@ -73,13 +74,18 @@ function animateSf(sf, parent) {
 }
 
 function letItSnow() {
+    if (spawnerId) {
+        clearInterval(spawnerId);
+    }
     var parent = $('#snow');
-    setInterval(() => {
+    spawnerId = setInterval(() => {
         var size = Math.floor(Math.random() * 3);
         animateSf(sf(size), parent);
     }, spawnTime);
 }
 
 function stopTheSnow() {
+    clearInterval(spawnerId);
+    spawnerId = '';
     $('[sf]', $('#snow')).remove();
 }
