@@ -61,18 +61,18 @@
   position: absolute;
   display: block;
   float: left;
-  height: 40%;
+  height: 47.5%;
   top: 50%;
   transform-origin: 50% 0%;
-  animation: sock-anim 1.8s alternate infinite ease-in-out;
+  animation: sock-anim 1.85s alternate infinite ease-in-out;
 }
 
 ._1 {
-  left: 10rem;
+  left: 8rem;
 }
 
 ._2 {
-  left: 5rem;
+  left: 3rem;
   animation-delay: 0.4s;
 }
 
