@@ -14,26 +14,32 @@
     top: -1rem;
     left: 0px;
     font-size: 16pt;
+    -webkit-animation: upDown 1.5s alternate infinite ease-in-out;
     animation: upDown 1.5s alternate infinite ease-in-out;
 
 }
 
 .snowflake-0 {
+    -webkit-animation-delay: 0s;
     animation-delay: 0s;
 }
 
 .snowflake-1 {
+    -webkit-animation-delay: 0s;
     animation-delay: 0s;
 }
 
 .snowflake-2 {
-    animation-delay: .4s;
+    -webkit-animation-delay: 0.4s;
+    animation-delay: 0.4s;
 }
 .snowflake-3 {
-    animation-delay: .4s;
+    -webkit-animation-delay: 0.4s;
+    animation-delay: 0.4s;
 }
 .snowflake-4 {
-    animation-delay: .2s;
+    -webkit-animation-delay: 0.2s;
+    animation-delay: 0.2s;
 }
 
 @keyframes upDown {
