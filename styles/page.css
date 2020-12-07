@@ -56,6 +56,23 @@
   filter: drop-shadow(5px 5px 10px rgba(0, 0, 0, 0.2));
 }
 
+.sock {
+  position: absolute;
+  /* width: 33%; */
+  display: block;
+  float: left;
+  height: 40%;
+  top: 50%;
+}
+
+.sock > ._1 {
+  left: 10rem;
+}
+
+.sock > ._2 {
+  left: 5rem;
+}
+
 #book {
   top: 50%;
   left: 50%;
