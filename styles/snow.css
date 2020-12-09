@@ -81,7 +81,13 @@ snowflake
     position: absolute;
     color: white;
     font-size: "Comic Neue";
-    animation: upDown 1.5s alternate infinite ease-in-out, rotate-sf 12s alternate infinite ease-in-out;
+    animation: rotate-sf 12s alternate infinite ease-in-out;
+
+}
+
+.sf-wrapper {
+    position: absolute;
+    animation: upDown 1.5s alternate infinite ease-in-out;
 }
 
 .sf-large {

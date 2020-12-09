@@ -37,13 +37,17 @@ function sf(size) {
     flake.addClass('sf');
     flake.addClass(sizeClass);
 
-    return flake;
+    var flakeWrapper = $(`<div sf class="sf-wrapper"/>`);
+
+    flakeWrapper.append(flake);
+
+    return flakeWrapper;
 
 }
 
 function animateSf(sf, parent) {
 
-    var size = sf.attr('sf-size');
+    var size = sf.children().attr('sf-size');
 
     sf.appendTo(parent);
 
