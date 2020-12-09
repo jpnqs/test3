@@ -26,6 +26,11 @@ class PageManager {
         if ((this.nActivePage + 1) <= this.nPageCount) {
             this.nActivePage++;
             this.oActivePage.attr('page-open', true);
+            this.oActivePage.parent().css('z-index', this.nZIndex);
+            this.nZIndex++;
+            if (this.nZIndex > 1000) {
+                this.nZIndex = 5;
+            }
             this._openPageById(this.oActivePage.attr('page-id'));
             this.oActivePage = $(this.oPages[this.nActivePage]);
         }
@@ -35,6 +40,7 @@ class PageManager {
         if ((this.nActivePage - 1) >= 0) {
             this.nActivePage--;
             this.oActivePage.attr('page-open', false);
+            this.oActivePage.parent().css('z-index', '');
             this.oActivePage = $(this.oPages[this.nActivePage]);
             this._closePageById(this.oActivePage.attr('page-id'));
         }

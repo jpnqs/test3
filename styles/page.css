@@ -64,7 +64,7 @@
   height: 47.5%;
   top: 50%;
   transform-origin: 50% 0%;
-  animation: sock-anim 1.85s alternate infinite ease-in-out;
+  animation: sock-anim 2s alternate infinite ease-in-out;
 }
 
 ._1 {
@@ -154,17 +154,17 @@
 
 @keyframes sock-anim{
 from {
-  -ms-transform: rotate(-5deg);
-  -moz-transform: rotate(-5deg);
-  -webkit-transform: rotate(-5deg);
-  -o-transform: rotate(-5deg);
-  transform: rotate(-5deg);
+  -ms-transform: rotate(-4deg);
+  -moz-transform: rotate(-4deg);
+  -webkit-transform: rotate(-4deg);
+  -o-transform: rotate(-4deg);
+  transform: rotate(-4deg);
 }
 to {
-  -ms-transform: rotate(5deg);
-  -moz-transform: rotate(5deg);
-  -webkit-transform: rotate(5deg);
-  -o-transform: rotate(5deg);
-  transform: rotate(5deg);
+  -ms-transform: rotate(4deg);
+  -moz-transform: rotate(4deg);
+  -webkit-transform: rotate(4deg);
+  -o-transform: rotate(4deg);
+  transform: rotate(4deg);
 }
 }
