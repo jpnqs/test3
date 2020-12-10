@@ -168,3 +168,8 @@ to {
   transform: rotate(4deg);
 }
 }
+
+.page-content {
+  -webkit-backface-visibility: hidden !important;
+  backface-visibility: hidden !important;
+}
