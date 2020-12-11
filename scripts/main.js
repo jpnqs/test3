@@ -1,6 +1,8 @@
 
+document.title = 'Merry Christmas Milena! 🎄';
+
 responsiveDesign.then(() => {
-    
+
     var pageManager = new PageManager();
 
     var input = new TouchInput();

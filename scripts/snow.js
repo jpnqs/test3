@@ -70,8 +70,8 @@ function animateSf(sf, parent) {
     });
 
     setTimeout(() => {
-        sf.addClass('sf-fade-out');
-    }, duration * 0.95);
+        sf.children().fadeOut(1100);
+    }, duration * 0.7);
 
     sf.addClass(`snowflake-${Math.floor(Math.random() * 5)}`);
 

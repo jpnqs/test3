@@ -109,15 +109,16 @@ snowflake
     to { transform: rotate(-200deg);}
 }
 
-.sf {
-    -webkit-transition: opacity 3s ease-in-out;
-    -moz-transition: opacity 3s ease-in-out;
-    -ms-transition: opacity 3s ease-in-out;
-    -o-transition: opacity 3s ease-in-out;
-    transition: opacity 3s ease-in-out;
+/* .sf-fade-out {
+    -webkit-animation: upDown 1.5s alternate infinite ease-in-out;
+    animation: upDown 1.5s alternate infinite ease-in-out;
 }
 
-.sf-fade-out {
-    opacity: 0;
-}
-
+@keyframes sf-fadeout {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+} */
