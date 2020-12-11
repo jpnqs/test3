@@ -22,16 +22,27 @@ class PageManager {
         $(`[page-id="${nId}"]`).css('transform', 'rotateY(0deg)');
     }
 
+    nextZIndex() {
+        this.nZIndex++;
+        return this.nZIndex;
+    }
+
     next() {
         if ((this.nActivePage + 1) <= this.nPageCount) {
             this.nActivePage++;
             this.oActivePage.attr('page-open', true);
-            this.oActivePage.parent().css('z-index', this.nZIndex);
-            this.nZIndex++;
+            this.oActivePage.parent().css('z-index', this.nextZIndex());
             if (this.nZIndex > 1000) {
                 this.nZIndex = 5;
             }
+            $('.flipable-site-front', this.oActivePage).css('z-index', this.nextZIndex());
+            
+            setTimeout(() => {
+                $('.flipable-site-back', this.oActivePage).css('z-index', this.nextZIndex());
+            }, 750);
+
             this._openPageById(this.oActivePage.attr('page-id'));
+            // debugger;
             this.oActivePage = $(this.oPages[this.nActivePage]);
         }
     }
@@ -41,6 +52,9 @@ class PageManager {
             this.nActivePage--;
             this.oActivePage.attr('page-open', false);
             this.oActivePage.parent().css('z-index', '');
+            $('.flipable-site-back', this.oActivePage).css('z-index', '');
+            $('.flipable-site-front', this.oActivePage).css('z-index', '');
+
             this.oActivePage = $(this.oPages[this.nActivePage]);
             this._closePageById(this.oActivePage.attr('page-id'));
         }

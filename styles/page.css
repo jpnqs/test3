@@ -142,34 +142,24 @@
   left: 5%;
 }
 
-/* @keyframes sock-anim {
-	0%,
-	100% {
-		transform: rotate(-5)
-	}
-	50% {
-		transform: rotate(5)
-	}
-} */
-
 @keyframes sock-anim{
-from {
-  -ms-transform: rotate(-4deg);
-  -moz-transform: rotate(-4deg);
-  -webkit-transform: rotate(-4deg);
-  -o-transform: rotate(-4deg);
-  transform: rotate(-4deg);
-}
-to {
-  -ms-transform: rotate(4deg);
-  -moz-transform: rotate(4deg);
-  -webkit-transform: rotate(4deg);
-  -o-transform: rotate(4deg);
-  transform: rotate(4deg);
-}
+  from {
+    -ms-transform: rotate(-4deg);
+    -moz-transform: rotate(-4deg);
+    -webkit-transform: rotate(-4deg);
+    -o-transform: rotate(-4deg);
+    transform: rotate(-4deg);
+  }
+  to {
+    -ms-transform: rotate(4deg);
+    -moz-transform: rotate(4deg);
+    -webkit-transform: rotate(4deg);
+    -o-transform: rotate(4deg);
+    transform: rotate(4deg);
+  }
 }
 
-.page-content {
+/* .page-content {
   -webkit-backface-visibility: hidden !important;
   backface-visibility: hidden !important;
-}
+} */
