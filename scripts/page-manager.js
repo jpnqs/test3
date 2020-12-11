@@ -22,7 +22,7 @@ class PageManager {
         $(`[page-id="${nId}"]`).css('transform', 'rotateY(0deg)');
     }
 
-    nextZIndex() {
+    _nextZIndex() {
         this.nZIndex++;
         return this.nZIndex;
     }
@@ -31,18 +31,17 @@ class PageManager {
         if ((this.nActivePage + 1) <= this.nPageCount) {
             this.nActivePage++;
             this.oActivePage.attr('page-open', true);
-            this.oActivePage.parent().css('z-index', this.nextZIndex());
+            this.oActivePage.parent().css('z-index', this._nextZIndex());
             if (this.nZIndex > 1000) {
                 this.nZIndex = 5;
             }
-            $('.flipable-site-front', this.oActivePage).css('z-index', this.nextZIndex());
+            $('.flipable-site-front', this.oActivePage).css('z-index', this._nextZIndex());
             
             setTimeout(() => {
-                $('.flipable-site-back', this.oActivePage).css('z-index', this.nextZIndex());
+                $('.flipable-site-back', this.oActivePage).css('z-index', this._nextZIndex());
             }, 750);
 
             this._openPageById(this.oActivePage.attr('page-id'));
-            // debugger;
             this.oActivePage = $(this.oPages[this.nActivePage]);
         }
     }
