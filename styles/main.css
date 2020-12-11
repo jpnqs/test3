@@ -97,11 +97,11 @@ body {
     animation: hint-fade 1.5s alternate infinite ease-in-out;
 }
 
-@keyframes hint-fade {
+/* @keyframes hint-fade {
     from {
         opacity: 0;
     };
     to {
         opacity: 1;
     }
-}
+} */

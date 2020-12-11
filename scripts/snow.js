@@ -71,7 +71,7 @@ function animateSf(sf, parent) {
 
     setTimeout(() => {
         sf.children().fadeOut(1100);
-    }, duration * 0.7);
+    }, duration * 0.6);
 
     sf.addClass(`snowflake-${Math.floor(Math.random() * 5)}`);
 

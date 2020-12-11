@@ -2,12 +2,12 @@
 
 function showHint(hint) {
     $('#hint-container')
-        .text(hint)
+        .html(hint)
         .addClass('hint-fade');
 }
 
 function hideHint() {
     $('#hint-container')
-        .text('')
+        .html('')
         .removeClass('hint-fade'); 
 }
