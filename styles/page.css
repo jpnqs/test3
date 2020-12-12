@@ -183,8 +183,14 @@ body {
 	border-left: 4rem solid white;
 }
 
+@-webkit-keyframes flash {
+  0%   { opacity: 1; }
+  100% { opacity: 0; }
+}
+
 .arrow-left {
 	border-right: 3.5rem solid white;
+  opacity:0;
 }
 
 @-webkit-keyframes flash {
@@ -197,14 +203,14 @@ body {
 }
 
 #arrow2 {
-  -webkit-animation: flash 2.5s infinite .5s;
+  -webkit-animation: flash 2.5s infinite .05s;
 }
 #arrow3 {
-  -webkit-animation: flash 2.5s infinite 1s;
+  -webkit-animation: flash 2.5s infinite 0.1s;
 }
 #arrow4 {
-  -webkit-animation: flash 2.5s infinite 1.5s;
+  -webkit-animation: flash 2.5s infinite 0.15s;
 }
 #arrow5 {
-  -webkit-animation: flash 2.5s infinite 2s;
+  -webkit-animation: flash 2.5s infinite 0.2s;
 }

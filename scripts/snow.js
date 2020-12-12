@@ -1,6 +1,6 @@
 let it = '❄️'; // 😉
 
-const spawnTime = 800;
+const spawnTime = 500 //800;
 var spawnerId = '';
 
 const sfSize = {
@@ -71,7 +71,7 @@ function animateSf(sf, parent) {
 
     setTimeout(() => {
         sf.children().fadeOut(1100);
-    }, duration * 0.6);
+    }, duration * 0.65);
 
     sf.addClass(`snowflake-${Math.floor(Math.random() * 5)}`);
 

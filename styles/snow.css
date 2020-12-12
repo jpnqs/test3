@@ -91,34 +91,28 @@ snowflake
 }
 
 .sf-large {
-    font-size: 175pt;
+    font-size: 180pt;
     opacity: 0.9;
+    color: transparent;
+    text-shadow: 0 0 0.2rem rgba(255, 255, 255, 0.9);
 }
 
 .sf-medium {
     font-size: 160pt;
     opacity: 0.9;
+    color: transparent;
+    text-shadow: 0 0 0.6rem rgba(255, 255, 255, 0.9);
 }
 
 .sf-small {
-    font-size: 150pt;
+    font-size: 140pt;
     opacity: 1;
+    color: transparent;
+    text-shadow: 0 0 0.85rem rgba(255, 255, 255, 0.75);
 }
 
 @keyframes rotate-sf {
-    to { transform: rotate(-200deg);}
-}
-
-/* .sf-fade-out {
-    -webkit-animation: upDown 1.5s alternate infinite ease-in-out;
-    animation: upDown 1.5s alternate infinite ease-in-out;
-}
-
-@keyframes sf-fadeout {
-    from {
-        opacity: 1;
+    to { 
+        transform: rotate(-200deg);
     }
-    to {
-        opacity: 0;
-    }
-} */
+}
