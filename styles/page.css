@@ -141,7 +141,7 @@
   left: 5%;
 }
 
-@keyframes sock-anim{
+@keyframes sock-anim {
   from {
     -ms-transform: rotate(-4deg);
     -moz-transform: rotate(-4deg);
@@ -149,6 +149,7 @@
     -o-transform: rotate(-4deg);
     transform: rotate(-4deg);
   }
+
   to {
     -ms-transform: rotate(4deg);
     -moz-transform: rotate(4deg);
@@ -173,29 +174,39 @@ body {
 .arrow {
   float: left;
   margin-right: 15px;
-	width: 0; 
-	height: 0; 
-	border-top: 2.5rem solid transparent;
-	border-bottom: 2.5rem solid transparent;
+  width: 0;
+  height: 0;
+  border-top: 2.5rem solid transparent;
+  border-bottom: 2.5rem solid transparent;
 }
 
 .arrow-right {
-	border-left: 4rem solid white;
+  border-left: 4rem solid white;
 }
 
 @-webkit-keyframes flash {
-  0%   { opacity: 1; }
-  100% { opacity: 0; }
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
 }
 
 .arrow-left {
-	border-right: 3.5rem solid white;
-  opacity:0;
+  border-right: 3.5rem solid white;
+  opacity: 0;
 }
 
 @-webkit-keyframes flash {
-  0%   { opacity: 1; }
-  100% { opacity: 0; }
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
 }
 
 #arrow1 {
@@ -205,12 +216,15 @@ body {
 #arrow2 {
   -webkit-animation: flash 2.5s infinite .05s;
 }
+
 #arrow3 {
   -webkit-animation: flash 2.5s infinite 0.1s;
 }
+
 #arrow4 {
   -webkit-animation: flash 2.5s infinite 0.15s;
 }
+
 #arrow5 {
   -webkit-animation: flash 2.5s infinite 0.2s;
 }

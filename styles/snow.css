@@ -94,7 +94,7 @@ snowflake
     font-size: 180pt;
     opacity: 0.9;
     color: transparent;
-    text-shadow: 0 0 0.2rem rgba(255, 255, 255, 0.9);
+    text-shadow: 0 0 0.1rem rgba(255, 255, 255, 1);
 }
 
 .sf-medium {

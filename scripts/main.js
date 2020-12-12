@@ -24,7 +24,7 @@ function setupPageManager() {
     var oPageManager = new PageManager();
 
     oPageManager.onPageOpen('', function(oPage, oPageManager) {
-        hideHint();
+        hideSwipeHint();
     });
 
     oPageManager.onPageOpen('merry-xmas', function(oPage, oPageManager) {

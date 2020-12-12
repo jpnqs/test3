@@ -1,22 +1,52 @@
 /* Color Theme Swatches in Hex */
-.Royal-Blue-1-hex { color: #021032; }
-.Royal-Blue-2-hex { color: #063CBF; }
-.Royal-Blue-3-hex { color: #0850FF; }
-.Royal-Blue-4-hex { color: #021440; }
-.Royal-Blue-5-hex { color: #0748E5; }
+.Royal-Blue-1-hex {
+    color: #021032;
+}
+
+.Royal-Blue-2-hex {
+    color: #063CBF;
+}
+
+.Royal-Blue-3-hex {
+    color: #0850FF;
+}
+
+.Royal-Blue-4-hex {
+    color: #021440;
+}
+
+.Royal-Blue-5-hex {
+    color: #0748E5;
+}
+
 /* Color Theme Swatches in RGBA */
-.Royal-Blue-1-rgba { color: rgba(2, 16, 49, 1); }
-.Royal-Blue-2-rgba { color: rgba(5, 59, 191, 1); }
-.Royal-Blue-3-rgba { color: rgba(8, 80, 255, 1); }
-.Royal-Blue-4-rgba { color: rgba(2, 20, 63, 1); }
-.Royal-Blue-5-rgba { color: rgba(7, 72, 228, 1); }
+.Royal-Blue-1-rgba {
+    color: rgba(2, 16, 49, 1);
+}
+
+.Royal-Blue-2-rgba {
+    color: rgba(5, 59, 191, 1);
+}
+
+.Royal-Blue-3-rgba {
+    color: rgba(8, 80, 255, 1);
+}
+
+.Royal-Blue-4-rgba {
+    color: rgba(2, 20, 63, 1);
+}
+
+.Royal-Blue-5-rgba {
+    color: rgba(7, 72, 228, 1);
+}
 
 #card {
     opacity: 0;
     transition: 1s;
 }
 
-html, body {
+html,
+body {
     height: 100%;
     width: 100%;
     padding: 0;
@@ -29,11 +59,11 @@ html {
 }
 
 body {
-	background: -webkit-radial-gradient(bottom, ellipse cover,  #021440 0%,#021032 100%);
-	background: -webkit-radial-gradient(ellipse at bottom, #021440 0%, #021032 100%);
-	background: -webkit-radial-gradient(bottom, ellipse, #021440 0%, #021032 100%);
-	background: radial-gradient(ellipse at bottom,  #021440 0%,#021032 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#094c72', endColorstr='#01293f',GradientType=1 );
+    background: -webkit-radial-gradient(bottom, ellipse cover, #021440 0%, #021032 100%);
+    background: -webkit-radial-gradient(ellipse at bottom, #021440 0%, #021032 100%);
+    background: -webkit-radial-gradient(bottom, ellipse, #021440 0%, #021032 100%);
+    background: radial-gradient(ellipse at bottom, #021440 0%, #021032 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#094c72', endColorstr='#01293f', GradientType=1);
     background-repeat: no-repeat;
 }
 
@@ -43,8 +73,6 @@ body {
     width: 100%;
     overflow: hidden;
 }
-
-.responsible-obj {}
 
 .center {
     top: 50%;
@@ -70,7 +98,7 @@ body {
     height: 100%;
     width: 100%;
 }
-  
+
 
 #msg {
     font-family: "Comic Neue";
@@ -80,7 +108,7 @@ body {
     color: white;
     display: flex;
     justify-content: center;
-    align-items: center;  
+    align-items: center;
     text-align: center;
 }
 
@@ -96,12 +124,3 @@ body {
 .hint-fade {
     animation: hint-fade 1.5s alternate infinite ease-in-out;
 }
-
-/* @keyframes hint-fade {
-    from {
-        opacity: 0;
-    };
-    to {
-        opacity: 1;
-    }
-} */

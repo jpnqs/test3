@@ -3,6 +3,8 @@
  * @author Jonas Grümpel 
  */
 
+var _showHideHint = false;
+
 /**
  * Show hint to the user 
  * @param {string} sHint html-String
@@ -28,13 +30,37 @@ function hideHint() {
  * @returns {void}
  */
 function showSwipeHint() {
-    showHint(`
-    <div class="arrow-holder">
-        <div id="arrow5" class="arrow arrow-left"></div>
-        <div id="arrow4" class="arrow arrow-left"></div>
-        <div id="arrow3" class="arrow arrow-left"></div>
-        <div id="arrow2" class="arrow arrow-left"></div>
-        <div id="arrow1" class="arrow arrow-left"></div>
-    </div>
-    `);
+
+    _showHideHint = true;
+
+    function _() {
+
+        showHint(`
+            <div class="arrow-holder">
+                <div id="arrow5" class="arrow arrow-left"></div>
+                <div id="arrow4" class="arrow arrow-left"></div>
+                <div id="arrow3" class="arrow arrow-left"></div>
+                <div id="arrow2" class="arrow arrow-left"></div>
+                <div id="arrow1" class="arrow arrow-left"></div>
+            </div>
+        `);
+
+        setTimeout(() => {
+            hideHint();
+            if (_showHideHint) {
+                _();
+            }
+        }, 2500);
+
+    }
+
+    _();
+
+}
+
+/**
+ * hide swipe hint
+ */
+function hideSwipeHint() {
+    _showHideHint = false;
 }

@@ -1,3 +1,6 @@
+/**
+ * Touch screen input
+ */
 class TouchInput {
     
     constructor() {
