@@ -1,4 +1,19 @@
+/**
+ * The page manager is used for all interactions with the christmas card, like swiping and those stuff 
+ * @author Jonas Grümpel
+ */
 
+/**
+ * Manages the pages of the christmas card
+ * @property {jQuery[]} oPages
+ * @property {number} nPageCount
+ * @property {jQuery} oActivePage
+ * @property {number} nActivePage
+ * @property {object} oPageOpenListener
+ * @property {object} oPageCloseListener
+ * @property {object} oPageShowCount
+ * @property {number} nZIndex 
+ */
 class PageManager {
 
     constructor() {

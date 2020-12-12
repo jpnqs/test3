@@ -1,3 +1,8 @@
+/**
+ * Automatically formats the screen for responsive design on smartphones (isn't that cool? :D)
+ * @author Jonas Grümpel
+ */
+
 var responsiveDesign = new $.Deferred();
 
 (function() {

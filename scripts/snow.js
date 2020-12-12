@@ -1,6 +1,6 @@
 let it = '❄️'; // 😉
 
-const spawnTime = 500 //800;
+const spawnTime = 500;
 var spawnerId = '';
 
 const sfSize = {
