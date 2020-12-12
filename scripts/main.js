@@ -5,6 +5,14 @@ responsiveDesign.then(() => {
 
     var pageManager = new PageManager();
 
+    pageManager.onPageOpen('', function(oPage, oPageManager) {
+        hideHint();
+    });
+
+    pageManager.onPageOpen('merry-xmas', function(oPage, oPageManager) {
+        console.log('lol');
+    });
+    window.pageManager = pageManager;
     var input = new TouchInput();
 
     input.onSwipe((dir) => {
