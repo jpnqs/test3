@@ -28,7 +28,7 @@ function setupPageManager() {
     });
 
     oPageManager.onPageOpen('merry-xmas', function(oPage, oPageManager) {
-
+        setTimeout(showSwipeHint, 10000);
     });
 
     window.oPageManager = oPageManager;

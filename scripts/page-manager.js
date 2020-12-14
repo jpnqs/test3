@@ -16,9 +16,13 @@
  */
 class PageManager {
 
+    /**
+     * Page Manager
+     * @public
+     */
     constructor() {
         this.oPages = $('[page-id]');
-        var aTemp = []
+        var aTemp = [];
         for (var i=this.oPages.length - 1; i>=0; i--) {
             aTemp.push(this.oPages[i]);
         }
@@ -36,19 +40,43 @@ class PageManager {
         this.nZIndex = 5;
     }
 
-    _openPageById(nId) {
-        $(`[page-id="${nId}"]`).css('transform', 'rotateY(-150deg)');
+    /**
+     * Open page by its id string
+     * @param {string} sId page id
+     * @returns {void}
+     * @private
+     */
+    _openPageById(sId) {
+        $(`[page-id="${sId}"]`).css('transform', 'rotateY(-150deg)');
     }
 
-    _closePageById(nId) {
-        $(`[page-id="${nId}"]`).css('transform', 'rotateY(0deg)');
+    /**
+     * Close page by its id string
+     * @param {string} sId page id
+     * @returns {void}
+     * @private
+     */
+    _closePageById(sId) {
+        $(`[page-id="${sId}"]`).css('transform', 'rotateY(0deg)');
     }
 
+    /**
+     * Calculate next z-index
+     * @returns {number} z-index
+     * @private
+     */
     _nextZIndex() {
         this.nZIndex++;
         return this.nZIndex;
     }
 
+    /**
+     * Add up counter when a page is shown
+     * for statistics to improve usability
+     * @param {string} sId page id
+     * @returns {void}
+     * @private
+     */
     _pageShown(sId) {
         if (!this.oPageShowCount[sId]) {
             this.oPageShowCount[sId] = 0;
@@ -56,6 +84,11 @@ class PageManager {
         this.oPageShowCount[sId] += 1;   
     }
 
+    /**
+     * Open next page 
+     * @returns {void}
+     * @public
+     */
     next() {
         if ((this.nActivePage + 1) <= this.nPageCount) {
 
@@ -97,6 +130,11 @@ class PageManager {
         }
     }
 
+    /**
+     * Open previous page
+     * @returns {void}
+     * @public
+     */
     previous() {
         if ((this.nActivePage - 1) >= 0) {
 
@@ -114,6 +152,13 @@ class PageManager {
         }
     }
 
+    /**
+     * Add event handler for an opened page
+     * @param {string} sId page id
+     * @param {function} fnHandler handler function
+     * @returns {void}
+     * @public
+     */
     onPageOpen(sId, fnHandler) {
         if (typeof fnHandler != 'function') {
             throw new TypeError();
@@ -121,6 +166,13 @@ class PageManager {
         this.oPageOpenListener[sId] = fnHandler;
     }
 
+    /**
+     * Add event handler for an closed page
+     * @param {string} sId page id
+     * @param {function} fnHandler handler function
+     * @returns {void}
+     * @public
+     */
     onPageClose(sId, fnHandler) {
         if (typeof fnHandler != 'function') {
             throw new TypeError();
@@ -128,11 +180,27 @@ class PageManager {
         this.oPageCloseListener[sId] = fnHandler;
     }
 
+    /**
+     * Get show count of page
+     * @param {string} sId page id
+     * @returns {number} count
+     * @public
+     */
     getShowCount(sId) {
         if (!this.oPageShowCount[sId]) {
             this.oPageShowCount[sId] = 0;
         }
         return this.oPageShowCount[sId];
+    }
+
+    /**
+     * Get current shown id 
+     * @returns {string} page id
+     * @public
+     * @see PageManager.oActivePage
+     */
+    getCurrentId() {
+        return this.oActivePage.attr('page-id');
     }
 
 }

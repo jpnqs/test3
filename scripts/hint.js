@@ -33,7 +33,7 @@ function showSwipeHint() {
 
     _showHideHint = true;
 
-    function _() {
+    (function _local() {
 
         showHint(`
             <div class="arrow-holder">
@@ -48,13 +48,11 @@ function showSwipeHint() {
         setTimeout(() => {
             hideHint();
             if (_showHideHint) {
-                _();
+                _local();
             }
         }, 2500);
 
-    }
-
-    _();
+    })();
 
 }
 
