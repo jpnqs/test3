@@ -228,3 +228,10 @@ body {
 #arrow5 {
   -webkit-animation: flash 2.5s infinite 0.2s;
 }
+
+#christmas-tree {
+  width:140%;
+  left: 7%;
+  bottom: 8%;
+  position: absolute;
+}
