@@ -94,21 +94,21 @@ snowflake
     font-size: 180pt;
     opacity: 0.9;
     color: transparent;
-    text-shadow: 0 0 0.1rem rgba(255, 255, 255, 1);
+    text-shadow: 0 0 0.5rem rgba(255, 255, 255, 1);
 }
 
 .sf-medium {
     font-size: 160pt;
     opacity: 0.9;
     color: transparent;
-    text-shadow: 0 0 0.6rem rgba(255, 255, 255, 0.9);
+    text-shadow: 0 0 0.8rem rgba(255, 255, 255, 0.9);
 }
 
 .sf-small {
     font-size: 140pt;
     opacity: 1;
     color: transparent;
-    text-shadow: 0 0 0.85rem rgba(255, 255, 255, 0.75);
+    text-shadow: 0 0 1rem rgba(255, 255, 255, 0.75);
 }
 
 @keyframes rotate-sf {
