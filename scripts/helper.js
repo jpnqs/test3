@@ -3,18 +3,19 @@ const helperMsgId = 'santas-little-helpers-message';
 
 function showHelper() {
 
-    var oBtn = $('<button id="' + helperId + '"><span class="material-icons" style="font-size: 60pt">help_outline</span></button>');
+    var oBtn = $('<div id="' + helperId + '"><span class="material-icons" style="font-size: 60pt">help_outline</span></div>');
 
     oBtn.css({
         'position': 'absolute',
-        'right': 0,
-        'top': 0,
-        'font-size': '60pt',
+        'right': '2rem',
+        'top': '2rem',
+        'font-size': '80pt',
         'color': 'white',
         'background-color': 'rgba(0,0,0,0)',
         'border': 'none',
         'opacity': 0,
-        'z-index': 100
+        'z-index': 100,
+        'text-align': 'center'
     });
 
     oBtn.on('click', function() {

@@ -19,7 +19,7 @@ responsiveDesign.then(() => {
         setTimeout(function() {
             q(!navUn, showHelper);
         }, 5000);
-    }, 12000);
+    }, 10000);
 
 });
 
