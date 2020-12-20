@@ -10,9 +10,9 @@ const sfSize = {
 };
 
 const sfDuration = {
-    [sfSize.large]: 11000,
-    [sfSize.medium]: 13000,
-    [sfSize.small]: 15000
+    [sfSize.large]: 12000, // 11000,
+    [sfSize.medium]: 14000, // 13000,
+    [sfSize.small]: 16000 // 15000
 };
 
 const sfClasses = {

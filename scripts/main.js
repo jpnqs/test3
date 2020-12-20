@@ -3,6 +3,8 @@
  * @author Jonas Grümpel
  */
 
+var navUn = false;
+
 document.title = 'Merry Christmas Milena! 🎄';
 
 responsiveDesign.then(() => {
@@ -11,7 +13,12 @@ responsiveDesign.then(() => {
 
     applyInputControl(oPageManager);
 
-    setTimeout(showSwipeHint, 7500);
+    setTimeout(function() {
+        q(!navUn, showSwipeHint);
+        setTimeout(function() {
+            q(!navUn, showHelper);
+        }, 5000);
+    }, 12000);
 
 });
 
@@ -25,10 +32,11 @@ function setupPageManager() {
 
     oPageManager.onPageOpen('', function(oPage, oPageManager) {
         hideSwipeHint();
+        navUn = true;
     });
 
     oPageManager.onPageOpen('merry-xmas', function(oPage, oPageManager) {
-        setTimeout(showSwipeHint, 10000);
+
     });
 
     window.oPageManager = oPageManager;
