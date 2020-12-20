@@ -30,6 +30,7 @@ class PageManager {
         this.nPageCount = this.oPages.length;
         this.nActivePage = 0;
         this.oActivePage = $(this.oPages[this.nActivePage]);
+        this.sActivePageId = 'cover';
         this.oPageOpenListener = {
             '': function() {}
         };
@@ -78,6 +79,8 @@ class PageManager {
      * @private
      */
     _pageShown(sId) {
+        sId = sId || 'polaroid';
+        window.location.hash = sId;
         if (!this.oPageShowCount[sId]) {
             this.oPageShowCount[sId] = 0;
         }
@@ -118,6 +121,7 @@ class PageManager {
             var sOpenId = oCurrentPage.attr('page-id');
 
             this._pageShown(sOpenId);
+            this.sActivePageId = sOpenId;
 
             // try to call event handler
             var fnHandler = this.oPageOpenListener[sOpenId];
@@ -148,7 +152,13 @@ class PageManager {
             $('.flipable-site-front', this.oActivePage).css('z-index', '');
 
             this.oActivePage = $(this.oPages[this.nActivePage]);
-            this._closePageById(this.oActivePage.attr('page-id'));
+
+            var sId = this.oActivePage.attr('page-id');
+
+            this._closePageById(sId);
+            this._pageShown(sId);
+            this.sActivePageId = sId;
+
         }
     }
 
@@ -201,6 +211,26 @@ class PageManager {
      */
     getCurrentId() {
         return this.oActivePage.attr('page-id');
+    }
+
+    openHash() {
+        var sHash = window.location.hash.replace(/^\#/, '').trim();
+
+        if (sHash == '') {
+            return;
+        }
+
+        var fnNext = () => {
+            if (!(this.sActivePageId == sHash)) {
+                this.next();
+                setTimeout(() => {
+                    fnNext();
+                }, 500);
+            }
+        };
+
+        fnNext();
+
     }
 
 }

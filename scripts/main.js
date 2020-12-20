@@ -10,8 +10,9 @@ document.title = 'Merry Christmas Milena! 🎄';
 responsiveDesign.then(() => {
 
     var oPageManager = setupPageManager();
-
     applyInputControl(oPageManager);
+
+    oPageManager.openHash();
 
     setTimeout(function() {
         q(!navUn, showSwipeHint);
