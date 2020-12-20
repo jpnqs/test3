@@ -213,18 +213,28 @@ class PageManager {
         return this.oActivePage.attr('page-id');
     }
 
+    /**
+     * Open the current hash routing
+     * @returns {void}
+     * @public
+     */
     openHash() {
+
         var sHash = window.location.hash.replace(/^\#/, '').trim();
+        var nTry = 0;
 
         if (sHash == '') {
             return;
         }
 
         var fnNext = () => {
+            nTry++;
             if (!(this.sActivePageId == sHash)) {
                 this.next();
                 setTimeout(() => {
-                    fnNext();
+                    if (nTry < this.oPages.length) {
+                        fnNext();
+                    }
                 }, 500);
             }
         };

@@ -3,7 +3,7 @@ const helperMsgId = 'santas-little-helpers-message';
 
 function showHelper() {
 
-    var oBtn = $('<button id="' + helperId + '">?</button>');
+    var oBtn = $('<button id="' + helperId + '"><span class="material-icons" style="font-size: 60pt">help_outline</span></button>');
 
     oBtn.css({
         'position': 'absolute',
